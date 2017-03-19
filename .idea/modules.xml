@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/GradualRadioBar.iml" filepath="$PROJECT_DIR$/GradualRadioBar.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demo/demo.iml" filepath="$PROJECT_DIR$/demo/demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gradualradiobar/gradualradiobar.iml" filepath="$PROJECT_DIR$/gradualradiobar/gradualradiobar.iml" />
+    </modules>
+  </component>
+</project>
