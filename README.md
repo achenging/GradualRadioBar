@@ -1,12 +1,24 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.achenging.view.example.MainActivity">
+## 简介
+修改自[nyakokishi/GradualRadioBar](https://github.com/nyakokishi/GradualRadioBar)，重新计算了icon与文字的位置，设置drawablePadding，paddingTop,paddingBottom后正确显示。
+ 
+## 效果
+**没有设置任何padding**
+![image](gif/screen_gradual_radiobar.gif)
 
+**设置drawablePadding**
+![image](gif/screen_gradual_radiobar2.gif)
+
+**设置paddingTop与paddingBottom**
+![image](gif/screen_gradual_radiobar3.gif)
+
+## 使用
+加入依赖：
+```
+    compile 'com.achenging.view:gradualradiobar:1.0.1'
+```
+
+布局xml:
+```
 
     <com.achenging.view.gradualradiobar.GradualRadioGroup
         android:id="@+id/radiobar"
@@ -21,7 +33,6 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:checked="true"
-            android:drawablePadding="10dp"
             android:drawableTop="@mipmap/home"
             android:gravity="center_horizontal"
             android:text="主页"
@@ -31,7 +42,6 @@
         <com.achenging.view.gradualradiobar.GradualRadioButton
             android:id="@+id/order"
             android:layout_width="0dp"
-            android:drawablePadding="10dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:drawableTop="@mipmap/order"
@@ -43,7 +53,6 @@
         <com.achenging.view.gradualradiobar.GradualRadioButton
             android:id="@+id/chat"
             android:layout_width="0dp"
-            android:drawablePadding="10dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             app:gradual_icon="@mipmap/chat"
@@ -55,7 +64,6 @@
         <com.achenging.view.gradualradiobar.GradualRadioButton
             android:id="@+id/my"
             android:layout_width="0dp"
-            android:drawablePadding="10dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             app:gradual_icon="@mipmap/my"
@@ -63,18 +71,36 @@
             android:text="我的"
             android:textColor="#555"
             app:gradual_color="#f75151"/>
-    </com.achenging.view.gradualradiobar.GradualRadioGroup>
+    </com.achenging.view.gradualradiobar.GradualRadioGroup> 
+```
 
-    <View
-        android:id="@+id/line"
-        android:layout_width="match_parent"
-        android:layout_height="1px"
-        android:layout_above="@id/radiobar"
-        android:background="#666"/>
 
-    <android.support.v4.view.ViewPager
-        android:id="@+id/viewpager"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@id/line"></android.support.v4.view.ViewPager>
-</RelativeLayout>
+java代码::
+```
+    gradualRadioGroup = (GradualRadioGroup) findViewById(R.id.radiobar);
+    viewPager.setAdapter(adapter);
+    // 关键代码
+    gradualRadioGroup.setViewPager(viewPager);
+```
+
+具体可以查看[demo](https://github.com/achenging/GradualRadioBar/tree/master/demo)
+
+
+
+
+License
+============
+
+    Copyright 2017 achenging
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.

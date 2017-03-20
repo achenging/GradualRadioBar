@@ -116,7 +116,7 @@ public class GradualRadioButton extends RadioButton {
         mBackgroundPaint.setAlpha(255 - mAlpha);
         int parentHeight = ((View) getParent()).getMeasuredHeight();
         canvas.drawBitmap(mBackground, (getWidth() - iconWidth) / 2,
-                parentHeight - mFontHeight - textPadding / 2 - iconHeight - getPaddingBottom(),
+                parentHeight - mFontHeight - textPadding / 2 - iconHeight - getPaddingBottom() - getCompoundDrawablePadding() / 2,
                 mBackgroundPaint);
     }
 
@@ -129,7 +129,7 @@ public class GradualRadioButton extends RadioButton {
         mCanvas.drawRect(mRect, mIconPaint);
         int parentHeight = ((View) getParent()).getMeasuredHeight();
         canvas.drawBitmap(mBitmap, (getWidth() - iconWidth) / 2,
-                parentHeight - mFontHeight - textPadding / 2 - iconHeight - getPaddingBottom(),
+                parentHeight - mFontHeight - textPadding / 2 - iconHeight - getPaddingBottom() - getCompoundDrawablePadding() / 2,
                 null);
     }
 
