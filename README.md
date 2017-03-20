@@ -3,12 +3,17 @@
  
 ## 效果
 **没有设置任何padding**
+
 ![image](gif/screen_gradual_radiobar.gif)
 
+<br/>
 **设置drawablePadding**
+
 ![image](gif/screen_gradual_radiobar2.gif)
 
+<br/>
 **设置paddingTop与paddingBottom**
+
 ![image](gif/screen_gradual_radiobar3.gif)
 
 ## 使用
