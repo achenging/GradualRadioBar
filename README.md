@@ -7,11 +7,13 @@
 ![image](gif/screen_gradual_radiobar.gif)
 
 <br/>
+
 **设置drawablePadding**
 
 ![image](gif/screen_gradual_radiobar2.gif)
 
 <br/>
+
 **设置paddingTop与paddingBottom**
 
 ![image](gif/screen_gradual_radiobar3.gif)
@@ -80,7 +82,7 @@
 ```
 
 
-java代码::
+java代码:
 ```
     gradualRadioGroup = (GradualRadioGroup) findViewById(R.id.radiobar);
     viewPager.setAdapter(adapter);
